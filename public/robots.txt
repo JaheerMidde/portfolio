@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jaheer.midde.vercel.app/sitemap.xml

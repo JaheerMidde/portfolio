@@ -13,6 +13,7 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding: 4rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

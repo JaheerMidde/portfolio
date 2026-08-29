@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
-import { MapPin, Briefcase, Zap, BookOpen, Activity, Film, Utensils } from 'lucide-react';
-import { personal, personalInterests } from '../data/portfolio';
+import { MapPin, Briefcase, Zap, BookOpen, Activity, Film, Utensils, FileText, type LucideIcon } from 'lucide-react';
+import { personal, personalInterests, beyondWorkSignals } from '../data/portfolio';
 
-const interestIconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+const interestIconMap: Record<string, LucideIcon> = {
   activity: Activity,
   film: Film,
   utensils: Utensils,
@@ -12,27 +12,24 @@ const interestIconMap: Record<string, React.ComponentType<{ className?: string }
 const cards = [
   {
     icon: Briefcase,
-    title: 'What I Do',
-    content:
-      'I build customer-facing web applications used by millions — responsive UIs, reliable API integration, and the tooling that keeps releases safe.',
+    title: 'Conversion & Performance',
+    content: 'UI lead for cart closers, promotional flyout optimization, and ML retention scoring - driving measurable relative conversion lift on high-traffic purchase surfaces.',
     color: 'text-accent-400',
-    bg: 'bg-accent-500/10 border-accent-500/20',
+    bg: 'bg-surface-800 border-white/10',
   },
   {
     icon: Zap,
-    title: 'How I Work',
-    content:
-      'Clear communication, thoughtful code reviews, and a bias toward maintainable solutions. I enforce 90% Jest coverage in CI and Lighthouse performance budgets so regressions do not reach production.',
-    color: 'text-cyan-400',
-    bg: 'bg-cyan-500/10 border-cyan-500/20',
+    title: 'System Design & Release Quality',
+    content: 'Architecture decisions for multi-device configurator state, SSR security boundaries, and Lighthouse attestation gates - supporting reliable launch cycles.',
+    color: 'text-warm-400',
+    bg: 'bg-surface-800 border-white/10',
   },
   {
     icon: BookOpen,
-    title: 'What I Enjoy',
-    content:
-      'Frontend architecture, design systems, and the craft of building interfaces that are fast, accessible, and pleasant to use at scale.',
-    color: 'text-emerald-400',
-    bg: 'bg-emerald-500/10 border-emerald-500/20',
+    title: 'UI Lead - Cart & Promotions',
+    content: 'Core UI POC for cart conversion and promotions - system design, code reviews, knowledge transfer, and cross-team coordination with feature flags, backend, and QA during incidents.',
+    color: 'text-gray-300',
+    bg: 'bg-surface-800 border-white/10',
   },
 ];
 
@@ -40,9 +37,7 @@ export default function About() {
   const { ref, inView } = useInView({ threshold: 0.1 });
 
   return (
-    <section id="about" ref={ref} className="py-24 bg-surface-900 relative overflow-hidden">
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 bg-accent-500/5 rounded-full blur-3xl" />
-
+    <section id="about" ref={ref} className="scroll-mt-16 py-24 bg-surface-900 relative" aria-labelledby="about-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -51,38 +46,37 @@ export default function About() {
           className="mb-16"
         >
           <div className="flex items-start gap-8">
-            {/* Avatar - swap the div below for: <img src="/photo.jpg" alt="Jaheer Midde" className="w-28 h-28 rounded-full object-cover flex-shrink-0 ring-2 ring-accent-500/30 ring-offset-4 ring-offset-surface-900 shadow-xl shadow-accent-500/20" /> */}
             <motion.div
               initial={{ opacity: 0, scale: 0.85 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="hidden sm:block relative flex-shrink-0"
+              className="hidden sm:block flex-shrink-0"
             >
-              <img 
-              src="https://media.licdn.com/dms/image/v2/D5603AQEHyvtv1C4hrw/profile-displayphoto-crop_800_800/B56Z3Yl2JfJ8AI-/0/1777455294894?e=1789603200&v=beta&t=0GVJpKHXVqUr7yAZqkcR0SlHXPkmel1klhw0z5mi_S0"
-              alt="Jaheer Midde"
-              width={112}
-              height={112}
-              loading="lazy"
-              decoding="async"
-              className="w-28 h-28 rounded-full bg-gradient-to-br from-accent-500 via-purple-500 to-cyan-500 flex items-center justify-center text-white text-3xl font-bold ring-2 ring-accent-500/30 ring-offset-4 ring-offset-surface-900 shadow-xl shadow-accent-500/20 select-none"
+              <img
+                src={personal.photoUrl}
+                alt="Jaheer Midde"
+                width={112}
+                height={112}
+                loading="lazy"
+                decoding="async"
+                className="w-28 h-28 rounded-full object-cover ring-1 ring-white/15"
               />
-              <span className="absolute bottom-1 right-1 w-4 h-4 bg-emerald-400 rounded-full border-2 border-surface-900" />
             </motion.div>
 
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-accent-400 font-mono text-sm">01.</span>
-                <div className="h-px flex-1 max-w-xs bg-gradient-to-r from-accent-500/50 to-transparent" />
+                <div className="h-px flex-1 max-w-xs bg-accent-500/30" />
               </div>
-              <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
+              <h2 id="about-heading" className="text-4xl font-serif text-white mb-4">About Me</h2>
               <p className="text-gray-400 text-lg max-w-2xl leading-relaxed">
-                Frontend Engineer at <span className="text-white font-medium">{personal.company}</span>, based in{' '}
+                {personal.title} at <span className="text-white font-medium">{personal.company}</span>, based in{' '}
                 <span className="inline-flex items-center gap-1 text-white font-medium">
                   <MapPin className="w-4 h-4 text-accent-400" aria-hidden="true" />
                   {personal.location}
                 </span>
-                . I design and ship reliable frontend systems across customer-facing e-commerce products and shared UI platforms, with a focus on accessible interfaces and maintainable delivery.
+                . Core UI lead for cart & promotions engineering on Verizon&apos;s customer-facing e-commerce platform - shipping cart conversion, multi-product configurator flows, and production reliability for high-volume customer journeys.{' '}
+                <span className="text-gray-300">Open to Software Engineer II/III (frontend) at product companies.</span>
               </p>
             </div>
           </div>
@@ -95,14 +89,42 @@ export default function About() {
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 + i * 0.12 }}
-              className={`p-6 rounded-2xl border ${card.bg} backdrop-blur-sm`}
+              className={`p-6 rounded-xl border ${card.bg}`}
             >
-              <card.icon className={`w-6 h-6 ${card.color} mb-4`} />
+              <card.icon className={`w-6 h-6 ${card.color} mb-4`} aria-hidden="true" />
               <h3 className="text-white font-semibold text-lg mb-3">{card.title}</h3>
               <p className="text-gray-400 leading-relaxed text-sm">{card.content}</p>
             </motion.div>
           ))}
         </div>
+
+        {/* Beyond Verizon */}
+        {beyondWorkSignals.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.55 }}
+            className="mt-8 p-5 rounded-xl bg-surface-800 border border-accent-500/15"
+          >
+            <p className="text-gray-400 text-xs font-medium uppercase tracking-wider mb-3">Beyond the Squad</p>
+            {beyondWorkSignals.map((signal) => (
+              <div key={signal.title} className="flex gap-3 items-start">
+                <div className="w-8 h-8 rounded-lg bg-accent-500/10 flex items-center justify-center flex-shrink-0">
+                  <FileText className="w-4 h-4 text-accent-400" aria-hidden="true" />
+                </div>
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-gray-300 text-sm font-medium">{signal.title}</span>
+                    <span className="px-1.5 py-0.5 rounded text-[10px] font-mono uppercase tracking-wider bg-accent-500/10 text-accent-400 border border-accent-500/20">
+                      {signal.type}
+                    </span>
+                  </div>
+                  <p className="text-gray-400 text-xs leading-relaxed">{signal.description}</p>
+                </div>
+              </div>
+            ))}
+          </motion.div>
+        )}
 
         {/* Beyond the Code */}
         <motion.div
@@ -111,7 +133,7 @@ export default function About() {
           transition={{ duration: 0.6, delay: 0.65 }}
           className="mt-8"
         >
-          <p className="text-gray-600 text-xs font-medium uppercase tracking-wider mb-4">Beyond the Code</p>
+          <p className="text-gray-400 text-xs font-medium uppercase tracking-wider mb-4">Beyond the Code</p>
           <div className="grid sm:grid-cols-3 gap-4">
             {personalInterests.map((interest, i) => {
               const Icon = interestIconMap[interest.icon];
@@ -124,11 +146,11 @@ export default function About() {
                   className="flex gap-3 items-start p-4 rounded-xl bg-surface-800 border border-white/5"
                 >
                   <div className="w-8 h-8 rounded-lg bg-surface-700 flex items-center justify-center flex-shrink-0">
-                    <Icon className="w-4 h-4 text-gray-400" />
+                    <Icon className="w-4 h-4 text-gray-400" aria-hidden="true" />
                   </div>
                   <div>
                     <div className="text-gray-300 text-sm font-medium mb-1">{interest.title}</div>
-                    <div className="text-gray-500 text-xs leading-relaxed">{interest.description}</div>
+                    <div className="text-gray-400 text-xs leading-relaxed">{interest.description}</div>
                   </div>
                 </motion.div>
               );

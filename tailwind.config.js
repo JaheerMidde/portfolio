@@ -26,10 +26,14 @@ export default {
           400: '#34d399',
           500: '#10b981',
         },
+        warm: {
+          400: '#f0c674',
+        }
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+        serif: ['Instrument Serif', 'Gerogia', 'serif'],
       },
       animation: {
         'gradient-x': 'gradient-x 4s ease infinite',

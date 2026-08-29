@@ -2,7 +2,7 @@
 
 Personal developer portfolio showcasing full-stack engineering work in micro-frontends, e-commerce at scale, and design systems.
 
-**Live site:** 
+**Live site:** [jaheermidde.vercel.app](https://jaheermidde.vercel.app)
 
 ## Stack
 
