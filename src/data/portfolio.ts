@@ -6,12 +6,12 @@ export const personal = {
   /** Sharp win - rendered on its own line in Hero for mobile readability */
   taglineProof: 'Unlocked Offers p95 3.8s -> 1.7s (55% faster) on an owned browse surface.',
   photoUrl: "https://media.licdn.com/dms/image/v2/D5603AQEHyvtv1C4hrw/profile-displayphoto-crop_800_800/B56Z3Yl2JfJ8AI-/0/1777455294894?e=1789603200&v=beta&t=0GVJpKHXVqUr7yAZqkcR0SlHXPkmel1klhw0z5mi_S0",
-  email: 'jaheer.midde@gmail.com',
+  email: 'middejaheer36@gmail.com',
   company: 'Verizon',
   location: 'Hyderabad, India',
   github: 'https://github.com/JaheerMidde',
   linkedin: 'https://www.linkedin.com/in/midde-jaheer/',
-  resume: '/resume.pdf' as string | null,
+  resume: '/Jaheer_Midde_s_Resume.pdf' as string | null,
   /** Set when ready: 'https://gitlab.com/your-username' */
   gitlab: null as string | null,
   /** Public source for this portfolio */
