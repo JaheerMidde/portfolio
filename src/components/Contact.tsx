@@ -142,7 +142,7 @@ export default function Contact() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ delay: 0.8 }}
-          className="text-center mt-20 space-y-3"
+          className="text-center mt-12 sm:mt-20 space-y-3"
         >
           <div className="text-gray-400 text-sm font-mono flex flex-wrap items-center justify-center gap-x-3 gap-y-2">
             <span>Built with {siteMeta.builtWith.join(' · ')}</span>

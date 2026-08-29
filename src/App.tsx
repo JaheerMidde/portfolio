@@ -11,7 +11,7 @@ const Experience = lazy(() => import('./components/Experience'));
 const Contact = lazy(() => import('./components/Contact'));
 
 function SectionFallback() {
-  return <div className="py-24 bg-surface-900" aria-hidden="true" />;
+  return <div className="py-16 sm:py-24 bg-surface-900" aria-hidden="true" />;
 }
 
 export default function App() {
