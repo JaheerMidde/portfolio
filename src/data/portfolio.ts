@@ -44,10 +44,6 @@ export const skills: Skill[] = [
   { name: 'TanStack Query', category: 'framework', level: 'proficient' },
   { name: 'Zustand / Redux', category: 'framework', level: 'proficient' },
 
-  // Databases
-  { name: 'PostgreSQL', category: 'database', level: 'proficient' },
-  { name: 'Oracle DB', category: 'database', level: 'proficient' },
-
   // Tooling
   { name: 'Jest & Testing Library', category: 'tooling', level: 'expert', context: '90% coverage gate enforced in CI' },
   { name: 'GitLab CI', category: 'tooling', level: 'proficient' },

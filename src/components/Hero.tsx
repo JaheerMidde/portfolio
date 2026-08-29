@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, Download, ExternalLink, Github, Linkedin, Mail, Sparkles } from 'lucide-react';
+import { ArrowDown, ExternalLink, Github, Linkedin, Mail, Sparkles } from 'lucide-react';
 import { personal } from '../data/portfolio';
 
 const floatingOrbs = [
