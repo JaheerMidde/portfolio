@@ -67,13 +67,13 @@ export default function Skills() {
     .filter((group) => group.items.length > 0);
 
   return (
-    <section id="skills" ref={ref} className="scroll-mt-16 py-24 bg-surface-800 relative">
+    <section id="skills" ref={ref} className="scroll-mt-16 py-16 sm:py-24 bg-surface-800 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-10 sm:mb-16"
         >
           <div className="flex items-center gap-3 mb-4">
             <span className="text-accent-400 font-mono text-sm">02.</span>

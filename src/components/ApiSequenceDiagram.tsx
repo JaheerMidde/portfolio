@@ -14,12 +14,12 @@ const LABEL = '#94a3b8';
 
 export default function ApiSequenceDiagram({ className = '' }: ApiSequenceDiagramProps) {
   return (
-    <div className={`rounded-xl bg-surface-900/80 border border-white/5 p-4 overflow-x-auto ${className}`}>
+    <div className={`rounded-xl bg-surface-900/80 border border-white/5 p-4 min-w-0 ${className}`}>
       <svg
         viewBox="0 0 720 280"
         role="img"
         aria-label="API sequence diagram: cart open triggers parallel bundle pricing fetch before carousel render"
-        className="w-full min-w-[520px] h-auto"
+        className="hidden sm:block w-full h-auto"
       >
         <defs>
           <marker id="seqArrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
@@ -84,6 +84,52 @@ export default function ApiSequenceDiagram({ className = '' }: ApiSequenceDiagra
         <text x="88" y="232" fill={WARM} fontSize="10" fontFamily="ui-monospace, monospace">carousel mount → then fetch → blocked paint</text>
         <text x="32" y="250" fill={MUTED} fontSize="10" fontFamily="ui-monospace, monospace">After:</text>
         <text x="88" y="250" fill={ACCENT_LIGHT} fontSize="10" fontFamily="ui-monospace, monospace">cart open → parallel fetch → sub-2s p95</text>
+      </svg>
+
+      <svg
+        viewBox="0 0 360 430"
+        role="img"
+        aria-label="Mobile API flow: cart open starts parallel pricing fetch before carousel render"
+        className="block w-full h-auto sm:hidden"
+      >
+        <defs>
+          <marker id="mobileSeqArrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6 Z" fill={MUTED} />
+          </marker>
+        </defs>
+
+        <text x="180" y="20" textAnchor="middle" fill={LABEL} fontSize="12" fontWeight="600" fontFamily="system-ui, sans-serif">
+          Cart Request Flow
+        </text>
+
+        <rect x="28" y="38" width="304" height="42" rx="8" fill={SURFACE} stroke={ACCENT} />
+        <text x="180" y="64" textAnchor="middle" fill="white" fontSize="11" fontWeight="600" fontFamily="system-ui, sans-serif">
+          1. User opens cart
+        </text>
+        <line x1="180" y1="80" x2="180" y2="96" stroke={MUTED} markerEnd="url(#mobileSeqArrow)" />
+
+        <rect x="28" y="100" width="304" height="42" rx="8" fill={SURFACE} stroke={ACCENT} />
+        <text x="180" y="126" textAnchor="middle" fill={ACCENT_LIGHT} fontSize="11" fontWeight="600" fontFamily="system-ui, sans-serif">
+          2. Start parallel pricing fetch
+        </text>
+        <line x1="180" y1="142" x2="180" y2="158" stroke={MUTED} markerEnd="url(#mobileSeqArrow)" />
+
+        <rect x="28" y="162" width="304" height="42" rx="8" fill={SURFACE} stroke={ACCENT} />
+        <text x="180" y="188" textAnchor="middle" fill="white" fontSize="10.5" fontWeight="600" fontFamily="system-ui, sans-serif">
+          3. Bundle API returns pricing + rules
+        </text>
+        <line x1="180" y1="204" x2="180" y2="220" stroke={MUTED} markerEnd="url(#mobileSeqArrow)" />
+
+        <rect x="28" y="224" width="304" height="42" rx="8" fill={SURFACE} stroke={ACCENT} />
+        <text x="180" y="250" textAnchor="middle" fill={ACCENT_LIGHT} fontSize="11" fontWeight="600" fontFamily="system-ui, sans-serif">
+          4. Render carousel with data
+        </text>
+
+        <rect x="16" y="290" width="328" height="104" rx="8" fill={SURFACE_DARK} stroke={LINE} />
+        <text x="30" y="316" fill={MUTED} fontSize="10" fontFamily="ui-monospace, monospace">Before</text>
+        <text x="30" y="334" fill={WARM} fontSize="10" fontFamily="ui-monospace, monospace">carousel mount -&gt; fetch -&gt; blocked paint</text>
+        <text x="30" y="362" fill={MUTED} fontSize="10" fontFamily="ui-monospace, monospace">After</text>
+        <text x="30" y="380" fill={ACCENT_LIGHT} fontSize="10" fontFamily="ui-monospace, monospace">cart open -&gt; parallel fetch -&gt; sub-2s p95</text>
       </svg>
     </div>
   );

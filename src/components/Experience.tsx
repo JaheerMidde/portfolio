@@ -7,13 +7,13 @@ export default function Experience() {
   const { ref, inView } = useInView({ threshold: 0.1 });
 
   return (
-    <section id="experience" ref={ref} className="scroll-mt-16 py-24 bg-surface-900 relative">
+    <section id="experience" ref={ref} className="scroll-mt-16 py-16 sm:py-24 bg-surface-900 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-10 sm:mb-16"
         >
           <div className="flex items-center gap-3 mb-4">
             <span className="text-accent-400 font-mono text-sm">04.</span>
@@ -170,7 +170,7 @@ export default function Experience() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16"
+          className="mt-12 sm:mt-16"
         >
           <div className="flex items-center gap-3 mb-6">
             <GraduationCap className="w-5 h-5 text-emerald-400" />

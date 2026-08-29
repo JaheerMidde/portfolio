@@ -49,7 +49,7 @@ export default function Contact() {
   const { ref, inView } = useInView({ threshold: 0.1 });
 
   return (
-    <section id="contact" ref={ref} className="scroll-mt-16 py-24 bg-surface-800 relative">
+    <section id="contact" ref={ref} className="scroll-mt-16 py-16 sm:py-24 bg-surface-800 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div
@@ -62,7 +62,7 @@ export default function Contact() {
               <div className="h-px w-16 bg-accent-500/30" />
             </div>
             <h2 className="text-4xl font-serif text-white mb-4">Get In Touch</h2>
-            <p className="text-gray-400 text-lg leading-relaxed mb-12">
+            <p className="text-gray-400 text-lg leading-relaxed mb-8 sm:mb-12">
               Open to Software Engineer II/III (frontend) at product companies.
               Reach out for full-time opportunities or conversations about frontend systems at scale.
             </p>
