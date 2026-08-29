@@ -8,7 +8,7 @@ export const personal = {
   location: 'Hyderabad, India',
   github: 'https://github.com/JaheerMidde',
   linkedin: 'https://www.linkedin.com/in/midde-jaheer/',
-  resume: './public/Jaheer_Midde_s_Resume.pdf' as string | null,
+  resume: './Jaheer_Midde_s_Resume.pdf' as string | null,
   /** Set when ready: 'https://gitlab.com/your-username' */
   gitlab: null as string | null,
   /** Optional link to this portfolio's source repo */
