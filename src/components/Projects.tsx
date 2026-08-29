@@ -9,7 +9,7 @@ import MetricDelta from './MetricDelta';
 import DecisionRecord from './DecisionRecord';
 import PerfFindings from './PerfFindings';
 import ApiSequenceDiagram from './ApiSequenceDiagram';
-import ConfiguratorStateDiagram from './ConfiguratorSection';
+import ConfiguratorStateDiagram from './ConfiguratorStateDiagram';
 import CollapsibleSection from './CollapsibleSection';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
