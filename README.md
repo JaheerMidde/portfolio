@@ -20,10 +20,10 @@ Frontend-focused developer portfolio for Jaheer Midde, a Software Engineer II an
 - About: engineering strengths, leadership style, and interests
 - Skills: evidence-based core strengths and supporting tools
 - Selected Work: production case studies and open-source projects
-- Experiece: career progression, outcomes, leadership, and education
+- Experience: career progression, outcomes, leadership, and education
 - Contact: email, calendar invite, GitHub, LinkedIn, and CI status
 
-Production case studies use anonymized descritpions and measurement context where employer-specific detials cannot be published.
+Production case studies use anonymized descriptions and measurement context where employer-specific details cannot be published.
 
 ## Architecture
 
@@ -31,7 +31,7 @@ This is a single-page Vite application. `App.tsx` owns the page composition, whi
 
 ```text
 src/
-├── components/     Page sections, diagrams, and reuable UI
+├── components/     Page sections, diagrams, and reusable UI
 ├── data/           Personal, skills, project, and experience
 content
 ├── hooks/          Viewport and active-section behavior
@@ -44,7 +44,7 @@ public/             Favicon, social preview, resume, robots.txt, and sitemap.xml
 - Semantic sections and headings with a skip-to-content link
 - Keyboard-visible focus states and accessible expandable project panels
 - Mobile navigation with keyboard dismissal and focus restoration
-- Reduced-motion-aware scorlling and Framer Motion configuration
+- Reduced-motion-aware scrolling and Framer Motion configuration
 - Responsive diagrams with text alternatives
 - Initial JavaScript kept smaller with section-level code splitting
 - Lighthouse CI and build/lint checks run through GitHub Actions
@@ -68,4 +68,4 @@ npm run preview
 
 The site is deployed through Vercel from the canonical GitHub `main` branch. Vercel runs `npm run build` and serves the generated `dist/` directory. SPA fallback behavior is configured in `vercel.json`; static files in `public/` should remain directly accessible.
 
-When updating content, edit `src/data/portfolio.ts`. Keep public assets in `public/`, update the canonical metatda in `index.html`, and verify `robots.txt`, `sitemap.xml`, resume access, and social previews after deployment.
+When updating content, edit `src/data/portfolio.ts`. Keep public assets in `public/`, update the canonical metadata in `index.html`, and verify `robots.txt`, `sitemap.xml`, resume access, and social previews after deployment.

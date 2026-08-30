@@ -13,7 +13,7 @@ const cards = [
   {
     icon: Briefcase,
     title: 'Conversion & Performance',
-    content: 'UI lead for high-traffic purchse surfaces - improving offer experiences, render performance, and controlled rollouts with measurable relative conversion lift.',
+    content: 'UI lead for high-traffic purchase surfaces - improving offer experiences, render performance, and controlled rollouts with measurable relative conversion lift.',
     color: 'text-accent-400',
     bg: 'bg-surface-800 border-white/10',
   },
@@ -27,7 +27,7 @@ const cards = [
   {
     icon: BookOpen,
     title: 'Purchase-Flow Leadership',
-    content: 'Core UI POC for purchase-flow engineering - system design, code reviews, knowledge transer, and cross-team coordination with featured flags, backend, and QA during incidents.',
+    content: 'Core UI POC for purchase-flow engineering - system design, code reviews, knowledge transfer, and cross-team coordination with feature flags, backend, and QA during incidents.',
     color: 'text-gray-300',
     bg: 'bg-surface-800 border-white/10',
   },
