@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, ExternalLink, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, ArrowRight, ExternalLink, Github, Linkedin, Mail } from 'lucide-react';
 import { personal } from '../data/portfolio';
 import CodeHighlight from './CodeHighlight';
 import { scrollToSection } from '../utils/scrollToSection';
@@ -99,6 +99,22 @@ export default function Hero() {
             transition={{ delay: 0.6, duration: 0.6 }}
             className="grid grid-cols-2 gap-3 mb-8 sm:flex sm:flex-wrap sm:mb-10"
           >
+            <a
+              href="#work"
+              className="col-span-2 flex min-w-0 items-center
+              justify-center gap-2 px-4 py-3 rounded-lg
+              bg-accent-500 hover:bg-accent-400 text-white
+              font-semibold transition-colors duration-200
+              focus-visible:outline-none focus-visible:ring-2
+              focus-visible:ring-accent-400
+              focus-visible:ring-offset-2
+              focus-visible:ring-offset-surface-900
+              sm:col-span-1 sm:px-6"
+            >
+              View selected work
+              <ArrowRight className="w-4 h-4"
+                aria-hidden="true" />
+            </a>
             <a
               href={`mailto:${personal.email}`}
               className="flex min-w-0 items-center justify-center gap-2 px-6 py-3 rounded-lg bg-surface-700 hover:bg-surface-600 border border-white/8 text-white font-semibold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-surface-900 sm:px-6"

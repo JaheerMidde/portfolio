@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUp } from 'lucide-react';
+import { getPreferredScrollBehavior } from '../utils/scrollToSection';
 
 export default function ScrollToTop() {
   const [visible, setVisible] = useState(false);
@@ -12,9 +13,7 @@ export default function ScrollToTop() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  const scrollToTop = () => window.scrollTo({ top:0, behavior: getPreferredScrollBehavior() });
 
   return (
     <AnimatePresence>

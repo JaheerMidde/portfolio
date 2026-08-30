@@ -211,7 +211,7 @@ export default function Projects() {
                           <div>
                             <h4 className="text-gray-400 text-xs uppercase tracking-wider font-medium mb-3">Impact Metrics</h4>
                             {project.metricContext && (
-                              <p className="text-gray-500 text-xs leading-relaxed mb-3">{project.metricContext}</p>
+                              <p className="text-gray-400 text-xs leading-relaxed mb-3">{project.metricContext}</p>
                             )}
                             <MetricDelta metrics={project.metrics} accentClass={accentText} />
                           </div>

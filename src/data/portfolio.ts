@@ -1,11 +1,11 @@
 export const personal = {
   name: 'Jaheer Midde',
-  title: 'Software Engineer II · Frontend UI Lead',
+  title: 'Software Engineer II - Frontend UI Lead',
   tagline:
-    'Frontend UI lead for Verizon e-commerce – cart conversion, configurator architecture, and production reliability across 6-repo Next.js micro-frontends handling ~60k cart sessions/day.',
+    'Frontend UI lead for Verizon\'s enterprise telecom e-commerce platform - conversion, multi-device configuration, and production reliability across six Next.js micro-frontends serving ~60k cart sessions/day.',
   /** Sharp win - rendered on its own line in Hero for mobile readability */
-  taglineProof: 'Unlocked Offers p95 3.8s -> 1.7s (55% faster) on an owned browse surface.',
-  photoUrl: "https://media.licdn.com/dms/image/v2/D5603AQEHyvtv1C4hrw/profile-displayphoto-crop_800_800/B56Z3Yl2JfJ8AI-/0/1777455294894?e=1789603200&v=beta&t=0GVJpKHXVqUr7yAZqkcR0SlHXPkmel1klhw0z5mi_S0",
+  taglineProof: 'Improved p95 latency on an owned browse surface from 3.8s to 1.7s (55% faster).',
+  photoUrl: '/Jaheer_Midde_DP.jpg',
   email: 'middejaheer36@gmail.com',
   company: 'Verizon',
   location: 'Hyderabad, India',
@@ -29,50 +29,33 @@ export const personal = {
 export interface Skill {
   name: string;
   category: 'language' | 'framework' | 'database' | 'tooling' | 'platform' | 'backend';
-  level: 'expert' | 'proficient' | 'familiar';
   context?: string;
   /** When true, shown in the Core Strengths section */
   core?: boolean;
 }
 
 export const skills: Skill[] = [
-  // Core - highlighted in Skills section; each backed by a case study below
-  { name: 'TypeScript', category: 'language', level: 'expert', context: 'Primary language across e-commerce micro-frontends', core: true },
-  { name: 'JavaScript', category: 'language', level: 'proficient', context: 'Runtime and tooling across both project monorepos' },
-  { name: 'HTML', category: 'language', level: 'proficient', context: 'Semantic structure across product and checkout surfaces' },
-  { name: 'CSS', category: 'language', level: 'proficient', context: 'Responsive styling with Tailwind CSS' },
-  { name: 'React', category: 'framework', level: 'expert', context: 'High-volume customer buy flows', core: true },
-  { name: 'Next.js', category: 'framework', level: 'expert', context: 'Configurator, cart, and checkout at scale', core: true },
-  { name: 'Micro-Frontends', category: 'platform', level: 'expert', context: 'Module Federation across browse, configurator, checkout', core: true },
-  { name: 'Module Federation', category: 'platform', level: 'expert', context: 'Runtime remotes and shared singletons across project monorepos' },
-  { name: 'Design Systems', category: 'platform', level: 'expert', context: 'Shared UI components across product surfaces', core: true },
-  { name: 'Web Performance', category: 'platform', level: 'expert', context: 'SRE <2s targets, Lighthouse CI in every pipeline', core: true },
+  // Core strengths, each grounded in the case studies below
+  { name: 'TypeScript', category: 'language', context: 'Primary language across six Next.js micro-frontend repositories', core: true },
+  { name: 'React', category: 'framework', context: 'UI architecture for high-volume purchase flows', core: true },
+  { name: 'Next.js', category: 'framework', context: 'Server-rendered and federated commerce surfaces', core: true },
+  { name: 'Micro-frontends (Module Federation)', category: 'platform', context: 'Remote composition, shared dependencies, and cross-repository contracts', core: true },
+  { name: 'Web Performance', category: 'platform', context: 'Request sequencing, render-path optimization, and CI performance budgets', core: true },
+  { name: 'Design Systems', category: 'platform', context: 'Shared UI patterns and component contracts across product surfaces', core: true },
 
-  // Frameworks & libraries
-  { name: 'Tailwind CSS', category: 'framework', level: 'proficient', context: 'Utility-first UI on portfolio and product surfaces' },
-  { name: 'TanStack Query', category: 'framework', level: 'proficient', context: 'Server state in cart, catalog, and federated remotes' },
-  { name: 'Zustand', category: 'framework', level: 'proficient', context: 'Device-context stack and cart UI state' },
-
-  // Platform & patterns
-  { name: 'SSR & Data Boundaries', category: 'platform', level: 'proficient', context: 'Plan sanitization, security remediation, hydration' },
-  { name: 'Feature Flags & Rollouts', category: 'platform', level: 'proficient', context: 'Graduated A/B throttling for ML cart closers' },
-  { name: 'Accessibility', category: 'platform', level: 'proficient', context: 'WCAG 2.1 on checkout and configurator surfaces' },
-  { name: 'E-Commerce Systems', category: 'platform', level: 'expert', context: 'Cart conversion, configurators, and checkout funnels' },
-
-  // Testing & CI
-  { name: 'Jest', category: 'tooling', level: 'proficient', context: '>90% coverage gates on squad-owned surfaces' },
-  { name: 'Playwright', category: 'tooling', level: 'proficient', context: 'Golden-path E2E in ShopForge and ConfigStack' },
-  { name: 'Lighthouse CI', category: 'tooling', level: 'proficient', context: 'Performance budgets enforced pre-merge' },
-  { name: 'GitLab CI', category: 'tooling', level: 'proficient', context: 'Multi-repo pipelines across 6 e-commerce repos' },
-  { name: 'Sonar', category: 'tooling', level: 'proficient', context: 'Static analysis and quality gates on every push' },
-  { name: 'Git', category: 'tooling', level: 'proficient', context: 'Version control and collaboration across project repos' },
-
-  // Backend & APIs
-  { name: 'Node.js', category: 'backend', level: 'familiar', context: 'Foundational backend knowledge' },
-  { name: 'Express.js', category: 'backend', level: 'familiar', context: 'Basic familiarity with REST service concepts' },
-  { name: 'MongoDB', category: 'backend', level: 'familiar', context: 'Basic familiarity with document storage' },
-  { name: 'Mongoose', category: 'backend', level: 'familiar', context: 'Basic MongoDB model integration' },
-  { name: 'REST APIs', category: 'backend', level: 'familiar', context: 'Frontend integration, request flows, and response handling' },
+  // Supporting tools and patterns
+  { name: 'Tailwind CSS', category: 'framework', context: 'Responsive styling across portfolio and product surfaces' },
+  { name: 'TanStack Query', category: 'framework', context: 'Server-state management in catalog and federated remotes' },
+  { name: 'Zustand', category: 'framework', context: 'Persistent device-context and cart UI state' },
+  { name: 'SSR & Data Boundaries', category: 'platform', context: 'Server-rendering security boundaries and hydration-safe data' },
+  { name: 'Feature Flags & Rollouts', category: 'platform', context: 'Graduated release and experiment control' },
+  { name: 'Accessibility', category: 'platform', context: 'WCAG 2.1 practices on checkout and configurator surfaces' },
+  { name: 'Jest', category: 'tooling', context: 'Unit coverage gates on squad-owned surfaces' },
+  { name: 'Playwright', category: 'tooling', context: 'Golden-path end-to-end coverage in open-source demos' },
+  { name: 'Lighthouse CI', category: 'tooling', context: 'Performance budgets enforced before merge' },
+  { name: 'GitLab CI', category: 'tooling', context: 'Multi-repository delivery pipelines' },
+  { name: 'Sonar', category: 'tooling', context: 'Static analysis and quality gates' },
+  { name: 'Node.js & REST APIs', category: 'backend', context: 'Frontend integration and foundational backend knowledge' },
 ];
 
 export interface ProjectMetric {
@@ -138,9 +121,9 @@ export const projects: Project[] = [
     headlineMetric: '49 tests · 3 federated apps · LCP 919 ms · public repo',
     metricContext: 'Test total includes unit and E2E coverage; LCP and CLS are Lighthouse results for the demo catalog route.',
     description:
-      'Open-source frontend-only micro-frontend e-commerce demo – App Router host, Pages Router remotes, shared singletons across federation boundaries, typed local catalog data, and cart-open bundle-pricing precomputation.',
+      'Open-source frontend-only micro-frontend e-commerce demo - App Router host, Pages Router remotes, shared singletons across federation boundaries, typed local catalog data, and cart-open bundle-pricing precomputation.',
     myContribution:
-      'Frontend focus – Module Federation composition, flyout promo UI, shared query/cart state, local data adapter, CI with Lighthouse budgets, and ADRs.',
+      'Frontend focus - Module Federation composition, flyout promo UI, shared query/cart state, local data adapter, CI with Lighthouse budgets, and ADRs.',
     metrics: [
       { label: 'Unit + E2E tests', before: '-', after: '49', display: 'kpi' },
       { label: 'Federated apps', before: '-', after: '3', display: 'kpi' },
@@ -159,7 +142,7 @@ export const projects: Project[] = [
       'npm workspaces monorepo - host, catalog-remote, cart-remote, shared packages',
       'Shared React, TanStack Query, and Zustand singletons across remote boundaries',
       'Playwright E2E + Lighthouse CI on pull requests',
-      'ADRs and perf sequence diagrams in repo docs',
+      'ADRs and perf sequence diagrams in repo docs/',
     ],
     tech: ['Next.js', 'Module Federation', 'TypeScript', 'TanStack Query', 'Zustand', 'Jest', 'Playwright', 'Lighthouse CI'],
     badge: 'Open Source',
@@ -175,9 +158,9 @@ export const projects: Project[] = [
     headlineMetric: '41 tests · persisted browser state · SSR-safe hydration · public repo',
     metricContext: 'Test total includes unit and E2E coverage; persistence refers to same-browser localStorage behavior.',
     description:
-      'Open-source frontend-only product configurator – multi-device UI, typed local catalog fixtures, browser-persisted sessions and demo receipts, and a checkout flow with client-side dependency validation.',
+      'Open-source frontend-only product configurator - multi-device UI, typed local catalog fixtures, browser-persisted sessions and demo receipts, and a checkout flow with client-side dependency validation.',
     myContribution:
-      'Frontend focus – configurator and checkout UI, persisted Zustand state, validation integration, and golden-path E2E.',
+      'Frontend focus - configurator and checkout UI, persisted Zustand state, validation integration, and golden-path E2E.',
     metrics: [
       { label: 'Unit + E2E tests', before: '-', after: '41', display: 'kpi' },
       { label: 'Validation rule cases', before: '-', after: '21+', display: 'kpi' },
@@ -208,59 +191,59 @@ export const projects: Project[] = [
   {
     id: 'ecommerce-platform',
     title: 'Cart Conversion & Performance',
-    subtitle: 'Save the Sale · Promotional Flyout · ML Retention · Sub-2s SRE',
-    headlineMetric: 'Unlocked Offers p95 3.8s -> 1.7s · Save the Sale +12% relative lift · flyout add-to-cart +8% relative lift',
-    metricContext: 'p95 is the 95th-percentile latency measure; percentage figures are relative lifts against the stated baselines; 10%-100% describes rollout exposure.',
+    subtitle: 'High-Traffic Cart Surfaces · Offer Merchandising · Controlled Rollouts · Sub-2s Target',
+    headlineMetric: 'Owned browse-surface p95 3.8s -> 1.7s · retention-offer conversion +12% relative · cart add-to-cart +8% relative',
+    metricContext: 'Anonymized internal production results on owned e-commerce surfaces. The latency figure is p95 before and after optimization; percentage figures are relative lifts against a pre-change or control baseline; rollout exposure describes a controlled feature-flag progression. Measurement windows, exact traffic, dates, and sample sizes are omitted.',
     description:
-      'UI lead for cart conversion on Verizon\'s Next.js e-commerce platform - Save the Sale gift-card closers, Buy More Save More flyout merchandising, and ML-based retention scoring for cart closers across high-volume purchase and upgrade journeys.',
+      'UI lead for conversion on Verizon\'s enterprise telecom e-commerce platform - improving promotional merchandising, retention offers, and purchase journeys across high-volume browse and checkout surfaces.',
     myContribution:
-      'Owned end-to-end: API re-sequencing design, flyout render optimization, and ML closer rollout architecture. Led code reviews; backend and QA coordinated on integration and A/B throttling.',
+      'Owned end-to-end: request sequencing design, offer render optimization, and controlled rollout architecture. Led code reviews; backend and QA coordinated integration and experiment operations.',
     problem:
-      'Flyout cart and Unlocked Offers pages exceeded SRE latency targets during promotional traffic, causing visible jank on the highest-traffic browse surfaces. Save the Sale gift-card closers ran as intrusive modals with low conversion, and promotional flyout merchandising underperformed on add-to-cart during peak campaigns.',
+      'High-traffic cart and offer surfaces exceeded performance targets and showed visible jank. A modal retention experience underperformed, while merchandising changes needed a safer path to production during peak traffic.',
     approach:
-      'Re-architected the bundle-pricing API call sequence to fire on cart open instead of after carousel mount; optimized promotional carousel rendering in the flyout cart; integrated ML retention scoring with graduated traffic throttling (10%-100%) behind a feature flag platform; replaced modal closers with in-page Save the Sale flows.',
+      'Moved the eligibility and pricing request earlier to run when the cart opened; optimized the promotional render path; integrated retention scoring with graduated feature-flag rollout; and replaced an intrusive modal experience with an in-page offer flow.',
     outcome:
-      'Delivered measurable conversion lift on cart surfaces – Save the Sale gift-card closer conversion delivered a relative lift of 12%, and promotional flyout add-to-cart rate delivered a relative lift of 8%. Eliminated visible jank on the flyout cart during peak traffic and shipped ML-driven in-page closers at full rollout with zero squad-owned release-day incidents during flagship launch windows.',
+      'On owned surfaces, p95 latency improved from 3.8s to 1.7s; a controlled retention-offer rollout delivered a 12% relative conversion lift; cart merchandising delivered an 8% relative add-to-cart lift; and full rollout completed with zero squad-owned release-day incidents.',
     technicalDeepDive:
-      'The flyout cart bottleneck came from rendering the full promotional carousel before bundle eligibility data arrived. I moved the bundle-pricing fetch earlier in the React lifecycle – triggering it on cart open rather than after carousel mount – so pricing and stackability rules were available before the first paint. Non-critical analytics hooks were deferred off the critical path. For ML cart closers, I built a split-flag architecture separating the new platform from legacy flows, allowing independent A/B throttling without cross-contamination. Each change shipped behind feature flags with Lighthouse CI budgets enforced pre-merge.',
+      'The bottleneck came from rendering a full promotional experience before eligibility data arrived. I moved the eligibility and pricing request to cart-open, parallel with shell render, so data was available before first paint; deferred non-critical analytics; reduced cascading re-renders; and separated new and legacy experiences behind independent flags. Each change shipped through staged rollout with performance budgets enforced pre-merge.',
     metrics: [
-      { label: 'Save the Sale relative conversion lift', before: 'pre-rollout', after: '+12%' },
-      { label: 'Flyout relative add-to-cart lift', before: 'pre-optimization', after: '+8%' },
-      { label: 'ML closer traffic rollout', before: '10% traffic', after: '100% traffic' },
-      { label: 'Modal -> in-page closers', before: 'modal', after: 'in-page' },
+      { label: 'Owned browse-surface p95 latency', before: '3.8s', after: '1.7s' },
+      { label: 'Retention-offer relative conversion lift', before: 'pre-change/control', after: '+12%' },
+      { label: 'Cart relative add-to-cart lift', before: 'pre-change/control', after: '+8%' },
+      { label: 'Feature rollout exposure', before: '10% traffic', after: '100% traffic' },
     ],
     artifacts: {
       showArchitecture: true,
       showApiSequence: true,
       decisionRecord: {
-        title: 'Fetch bundle pricing on cart open, not carousel mount',
-        context: 'Promotional flyout rendered the full carousel before bundle eligibility data arrived, blocking first paint and causing visible jank during peak traffic.',
-        decision: 'Move the bundle-pricing API call to fire on cart open - parallel with shell render - and defer non-critical analytics off the critical path.',
-        outcome: 'Carousel paints with pricing data already in cache; sub-2s p95 on Unlocked Offers during peak promo traffic.',
+        title: 'Fetch pricing data on cart open, not render',
+        context: 'The promotional surface rendered before pricing and eligibility data arrived, blocking first paint and causing visible jank during peak traffic.',
+        decision: 'Start the pricing and eligibility request when the cart opens - in parallel with shell render - and defer non-critical analytics off the critical path.',
+        outcome: 'Promotional content paints with pricing data already in cache; sub-2s p95 on an owned browse surface during peak traffic.',
       },
       perfFindings: [
         {
           tool: 'Chrome DevTools Performance',
-          finding: 'Long task (340ms) on carousel mount blocked main thread before bundle API resolved',
-          fix: 'Parallelized bundle-pricing fetch on cart open; deferred analytics hooks post-paint',
+          finding: 'Long task (340ms) during promotional render blocked the main thread before pricing data resolved',
+          fix: 'Parallelized pricing and eligibility fetch on cart open; deferred analytics hooks post-paint',
         },
         {
           tool: 'React Profiler',
-          finding: 'PromotionalCarousel re-rendered 3x on cart open due to cascading state updates',
-          fix: 'Batched eligibility state into single update; memoized carousel item list',
+          finding: 'Promotional content re-rendered 3x on cart open due to cascading state updates',
+          fix: 'Batched eligibility state into a single update; memoized the item list',
         },
         {
           tool: 'Lighthouse CI',
           finding: 'LCP element (hero promo tile) delayed 2.1s by render-blocking API waterfall',
-          fix: 'Pre-fetch on cart open brought LCP below the 2.1s SRE target on staging attestation',
+          fix: 'Pre-fetch on cart open brought LCP below the 2.1s performance target on staging attestation',
         },
       ],
     },
     highlights: [
-      'Re-sequenced bundle-pricing API calls ahead of carousel render - eliminated visible jank on promotional flyout cart during peak traffic',
-      'Shipped in-page Save the Sale gift-card closers (multi-tier $100/$200/$270+) replacing intrusive modals on high-traffic cart surfaces',
-      'Optimized flyout merchandising render path - measurable add-to-cart lift during peak campaign windows',
-      'Integrated ML-driven cart closers with propensity scoring and graduated 10%-100% traffic throttle for controlled rollout',
+      'Re-sequenced eligibility and pricing requests ahead of the promotional render path - eliminating visible jank during peak traffic',
+      'Replaced an intrusive modal retention experience with an in-page offer flow on high-traffic purchase surfaces',
+      'Optimized cart merchandising and delivered an 8% relative add-to-cart lift against the comparison baseline',
+      'Integrated retention scoring with a graduated 10%->100% feature-flag rollout for controlled release',
     ],
     tech: ['Next.js', 'React', 'TypeScript', 'Feature Flags', 'Jest', 'Lighthouse CI', 'TanStack Query', 'Module Federation'],
     badge: 'Production',
@@ -270,23 +253,23 @@ export const projects: Project[] = [
   {
     id: 'design-system',
     title: 'Multi-Product Configurator Platform',
-    subtitle: 'Cross-Device Journeys · Plan Stacking · Squad UI Lead',
-    headlineMetric: 'Watch+Phone attach +18% relative lift · zero state loss on device switches · 76 MRs merged across 6 repos',
-    metricContext: 'The attach-rate figure is a relative lift versus the stated baseline; onboarding times compare approximate durations; MRs and repository counts describe H1 2026 leadership scope.',
+    subtitle: 'Cross-Device Configuration · Dependency Validation · UI Leadership',
+    headlineMetric: 'Connected-device attach +18% relative · zero state loss · 76 MRs across 6 repos',
+    metricContext: 'Anonymized internal production result on owned purchase flows. The attach-rate figure is a relative lift against a pre-change baseline; onboarding compares approximate durations; MR and repository counts describe H1 2026 leadership scope. Measurement window, exact traffic, and sample size are omitted.',
     description:
-      'Core UI lead for a Next.js device configurator spanning smartphones, watches, and tablets – multi-device navigation, cross-device state persistence, and complex plan-stacking logic across connected-device buy journeys.',
+      'Core UI lead for a Next.js multi-product device configurator spanning phones, wearables, and tablets - multi-device navigation, persistent state, and dependency validation across connected-device purchase journeys.',
     myContribution:
-      'Designed the device-context state machine and cross-category validation rules. Owned system design docs and final review on 76 MRs across 6 repos; mentored squad on configurator patterns and grooming.',
+      'Designed the device-context state model and cross-category validation rules. Owned system design docs and final review on 76 MRs across 6 repositories; mentored the squad on configurator patterns and grooming.',
     problem:
-      'Customers adding watches, tablets, and phones in mixed orders hit dead-end flows, lost configuration state between product pages and the configurator, and encountered blank pages when switching device contexts mid-journey. Multi-device attach rates lagged on Watch+Phone bundling paths.',
+      'Customers combining devices in mixed orders hit dead-end flows, lost configuration state between product pages and the configurator, and encountered blank pages when switching device contexts mid-journey. Connected-device attach rates lagged on bundle paths.',
     approach:
-      'Engineered a device-context stack in client state for multi-product sessions; built cross-category dependency validation so attributes and Number Share eligibility persist across Watch -> Phone -> Configurator paths; led system design, grooming, and code reviews for the cart & promotions UI squad.',
+      'Engineered a device-context stack in client state for multi-product sessions; built cross-category dependency validation so selections and companion-device eligibility persist across product paths; and led system design, grooming, and code reviews for the purchase-flow UI group.',
     outcome:
-      'Enabled bi-directional add journeys (Watch->Phone or Phone->Watch) with zero data loss across device-context switches; multi-device attach rate delivered a relative lift of 18% on Watch+Phone bundling flows. Delivered promo selection flows for major campaigns and cut new-developer onboarding from ~3 weeks -> 1.5 weeks via structured knowledge-transfer sessions.',
+      'Enabled bidirectional add journeys with zero data loss across device-context switches; connected-device attach rate delivered an 18% relative lift on bundle flows. Cut new-developer onboarding from ~3 weeks to ~1.5 weeks through structured knowledge-transfer sessions.',
     technicalDeepDive:
-      'The configurator maintains a device-context stack in client state - when a user adds a smartwatch then navigates to add a phone, the configurator auto-focuses the newest device while persisting prior selections (case/band/size variants, Number Share eligibility, plan tier). Cross-category logic validates dependencies before checkout: a Number Share watch requires an eligible phone line, enforced at config time rather than cart. As UI lead for the cart & promotions squad, I finalize approach docs, lead grooming, and conduct code reviews across 6 repositories – merging 76 MRs in H1 2026 with zero static-analysis issues and Sonar quality gates on every push.',
+      'The configurator maintains a device-context stack in client state - when a user adds one device and navigates to another, the newest device becomes active while prior selections and eligibility decisions remain available. Cross-category logic validates dependencies before checkout rather than deferring them to the cart. As UI lead, I finalized approach docs, led grooming, and conducted code reviews across six repositories - merging 76 MRs in H1 2026 with zero static-analysis issues and quality gates on every push.',
     metrics: [
-      { label: 'Watch+Phone relative attach-rate lift', before: 'pre-state machine', after: '+18%' },
+      { label: 'Connected-device relative attach-rate lift', before: 'pre-change baseline', after: '+18%' },
       { label: 'MRs merged (H1 2026)', before: '-', after: '76', display: 'kpi' },
       { label: 'Developer onboarding time', before: '~3 wks', after: '~1.5 wks' },
       { label: 'Repositories led', before: '-', after: '6', display: 'kpi' },
@@ -295,16 +278,16 @@ export const projects: Project[] = [
       showStateDiagram: true,
       decisionRecord: {
         title: 'Client-side device-context stack vs. URL-driven state',
-        context: 'Multi-device journeys (Watch->Phone->Tablet) needed persistent config across page navigations without exposing internal plan data in URL params.',
-        decision: 'Maintain a device-context stack in client state with dependency validation at config time; sync only non-sensitive selections to URL for shareability.',
-        outcome: 'Zero state loss on device-context switches; Number Share dependencies enforced before checkout, not at cart.',
+        context: 'Multi-device journeys needed persistent configuration across page navigations without exposing sensitive purchase data in URL parameters.',
+        decision: 'Maintain a device-context stack in client state with dependency validation during configuration; sync only non-sensitive selections to the URL for shareability.',
+        outcome: 'Zero state loss on device-context switches; cross-category dependencies enforced before checkout, not at cart.',
       },
     },
     highlights: [
-      'Built multi-device navigation - seamless toggle between Phone, Watch, and Tablet in a single session without state loss',
-      'Orchestrated Watch+Phone bundling with in-flow "Shop Phone" from Number Share modal, driving multi-device attachment',
-      'UI lead for cart & promotions squad: system design, grooming, knowledge transfer, and code reviews across 6 repos',
-      'Delivered Pay Off Your Phone migration and chatbot-to-checkout integration as core UI POC on the e-commerce platform',
+      'Built multi-device navigation - seamless switching between product categories without state loss',
+      'Orchestrated connected-device bundle flows with an in-context path to add a companion product',
+      'UI lead for purchase-flow engineering: system design, grooming, knowledge transfer, and code reviews across six repositories',
+      'Delivered purchase-flow migrations and guided checkout integrations as a core UI point of contact',
     ],
     tech: ['Next.js', 'TypeScript', 'React', 'Feature Flags', 'Jest', 'Sonar', 'Zustand', 'Module Federation'],
     badge: 'Platform',
@@ -314,52 +297,52 @@ export const projects: Project[] = [
   {
     id: 'cms-platform',
     title: 'Production Reliability & Release Engineering',
-    subtitle: 'SSR Security Fix · Defect Triage · Launch Quality',
-    headlineMetric: '847 accessory errors/wk -> 0 · launch MTTR 4h -> <60min · checkout completion +6% relative lift',
-    metricContext: 'Error and MTTR values are weekly or launch-window measures on owned surfaces; checkout completion shows a relative lift versus the pre-fix baseline.',
+    subtitle: 'SSR Data Boundary · Incident Triage · Launch Quality',
+    headlineMetric: '~847 errors/wk -> 0 observed · launch MTTR 4h -> <60min · checkout completion +6% relative',
+    metricContext: 'Anonymized internal production results on owned checkout surfaces. Error volume is a weekly before/after log comparison; zero means no observed errors during the post-fix window. MTTR is launch-window time to mitigation; checkout completion is a relative comparison against the pre-fix baseline. Measurement windows, exact traffic, dates, and sample sizes are omitted.',
     description:
-      'Frontend owner of production stability for squad-owned e-commerce surfaces – triaging Blocker/Critical defects during flagship device launch windows, enforcing security and coverage gates, and driving performance attestation across staging environments.',
+      'Frontend owner of production stability for squad-owned e-commerce surfaces - triaging high-severity defects during flagship launches, enforcing security and coverage gates, and driving performance attestation across staging environments.',
     myContribution:
-      'Owned SSR migration design and implementation, production defect triage, and cross-platform war-room coordination. Designed attestation and coverage gates; QA and backend executed test plans and platform fixes.',
+      'Owned the server-rendering migration, production defect triage, and cross-platform incident coordination. Designed attestation and coverage gates; QA and backend executed test plans and platform fixes.',
     problem:
-      'A client-side API integration exposed plan eligibility data flagged in security compliance review. Accessory purchase flows logged ~847 production errors per week, depressing checkout completion; defect backlog aged during high-traffic device launches with MTTR spiking to 4+ hours.',
+      'A client-side data integration exposed sensitive eligibility fields during compliance review. An accessory purchase flow logged ~847 production errors per week, depressing checkout completion; the defect backlog aged during high-traffic launches with MTTR spiking above four hours.',
     approach:
-      'Re-architected the vulnerable client-side fetch to Next.js server-side rendering, stripping sensitive fields before hydration; triaged 25+ production defects using log analysis and internal triage tooling; coordinated cross-platform fixes with backend and QA in war-room sessions; validated every fix across staged rollout regions before release.',
+      'Moved the sensitive eligibility fetch behind Next.js server-side rendering and stripped sensitive fields before hydration; triaged 25+ production defects using log analysis and triage tooling; coordinated fixes with backend and QA in incident sessions; and validated each fix across staged rollout regions before release.',
     outcome:
-      'Closed the security finding via SSR migration; brought accessory flow system errors from 847/week -> 0 on owned checkout surfaces with checkout completion delivering a relative lift of 6%. Zero carry-forward defects release-over-release within squad scope; zero post-deployment rollbacks on iPhone 17 and Samsung S25 releases; MTTR during launch windows reduced from 4h -> <60min.',
+      'Closed the security finding through the SSR migration; reduced accessory-flow errors from ~847/week to zero observed on owned checkout surfaces while checkout completion delivered a 6% relative lift. Achieved zero carry-forward defects within squad scope, zero post-deployment rollbacks across consecutive flagship launches, and reduced launch-window MTTR from 4h+ to under 60 minutes.',
     technicalDeepDive:
-      'The highest-impact frontend fix was migrating a plan-eligibility API integration from client-side fetch to Next.js server-side rendering. The client bundle had been exposing plan eligibility data in network responses flagged by security review. I moved the fetch into getServerSideProps, stripped sensitive fields before hydration, and added Jest tests for the SSR boundary – closing the finding without changing the user-facing UI. Accessory flow errors were a separate thread: recurring log patterns pointed to race conditions in add-to-cart state during multi-item sessions. I isolated the pattern in production logs, coordinated a root-cause fix with platform teams, and verified in canary before east/west promotion. Every feature ships with performance attestation and >90% unit test coverage as primary defense against MTTR spikes on squad-owned surfaces.',
+      'The highest-impact frontend fix moved a sensitive eligibility integration from the client boundary to Next.js server-side rendering, stripped fields before hydration, and added tests for the boundary - closing the finding without changing the user-facing UI. Accessory-flow errors were a separate thread: recurring log patterns pointed to race conditions during multi-item sessions. I isolated the pattern in production logs, coordinated a root-cause fix with platform teams, and verified it in canary before regional promotion. Every feature ships with performance attestation and >90% unit test coverage as a defense against MTTR spikes on squad-owned surfaces.',
     metrics: [
-      { label: 'Accessory errors/wk', before: '847', after: '0' },
+      { label: 'Accessory errors/week observed', before: '~847', after: '0' },
       { label: 'Launch MTTR', before: '4h+', after: '<60m' },
       { label: 'Checkout completion relative lift', before: 'pre-fix', after: '+6%' },
       { label: 'Launch rollbacks', before: '-', after: '0', display: 'kpi' },
     ],
     artifacts: {
       decisionRecord: {
-        title: 'Migrate plan-eligibility fetch from client to SSR',
-        context: 'Client-side fetch exposed plan eligibility data in network responses, flagged in security compliance review.',
-        decision: 'Move fetch to getServerSideProps, strip sensitive fields before hydration; add Jest tests for the SSR boundary.',
-        outcome: 'Security finding closed with zero UI changes; client bundle no longer exposes eligibility data.',
+        title: 'Move sensitive eligibility data behind SSR',
+        context: 'A client-side data integration exposed sensitive eligibility fields during security compliance review.',
+        decision: 'Move the integration behind server-side rendering, strip sensitive fields before hydration, and add tests for the boundary.',
+        outcome: 'Security finding closed with zero UI changes; sensitive eligibility data no longer crosses the client boundary.',
       },
       perfFindings: [
         {
           tool: 'Production log analysis',
-          finding: '847 accessory flow errors/week from race condition in multi-item add-to-cart state',
+          finding: '~847 accessory-flow errors/week from a race condition in multi-item purchase state',
           fix: 'Isolated pattern in logs, coordinated root-cause fix with platform teams, verified in canary',
         },
         {
           tool: 'Defect triage tooling',
-          finding: '25+ Blocker/Critical defects aging during iPhone/Samsung launch windows',
+          finding: '25+ high-severity defects aging during flagship launch windows',
           fix: 'War-room triage with backend/QA; zero carry-forward defects release-over-release',
         },
       ],
     },
     highlights: [
-      'Migrated client-side API to Next.js SSR for security clearance - sensitive plan data no longer exposed in client bundles',
+      'Moved sensitive eligibility data behind Next.js SSR for security clearance - protected fields no longer cross the client boundary',
       'Eliminated recurring accessory flow errors via log analysis and cross-platform root-cause fix on owned checkout surfaces',
-      'War-room triage on 25+ Blocker/Critical defects during flagship launch windows with zero carry-forward release-over-release',
-      'Zero rollbacks on squad-owned iPhone 17 and Samsung S25 releases across consecutive launch cycles',
+      'War-room triage on 25+ high-severity defects during flagship launch windows with zero carry-forward release-over-release',
+      'Zero rollbacks on squad-owned flagship releases across consecutive launch cycles',
     ],
     tech: ['Next.js', 'Jest', 'SSR', 'Sonar', 'GitLab CI', 'Jenkins', 'Accessibility (WCAG 2.1)'],
     badge: 'Production',
@@ -397,18 +380,18 @@ export const experiences: Experience[] = [
       { role: 'Software Engineer II', period: 'Dec 2023 - Present' },
     ],
     description:
-      'Core UI lead for cart & promotions engineering on Verizon\'s customer-facing e-commerce platform - owning cart conversion, multi-product configurator architecture, and production reliability across browse, configurator, and checkout micro-frontends serving high-volume customer journeys.',
+      'Core UI lead for purchase-flow engineering on Verizon\'s enterprise telecom e-commerce platform - owning conversion improvements, multi-product configurator architecture, and production reliability across browse, configuration, and checkout micro-frontends serving high-volume customer journeys.',
     achievements: [
-      'Cart & promotions UI lead - Save the Sale, promotional flyout merchandising, and ML retention closers across browse and checkout micro-frontends',
-      'Architected multi-device configurator enabling Watch+Phone+Tablet journeys with persistent cross-device state and bi-directional add flows',
+      'UI lead for conversion and offer experiences across browse and checkout micro-frontends',
+      'Architected a multi-product configurator enabling persistent cross-device state and bidirectional add flows',
       'Owned production stability for squad surfaces - SSR security remediation, defect triage, and launch-window war rooms during flagship releases',
-      'Shipped consecutive iPhone and Samsung launch cycles with coordinated cross-platform triage and no carry-forward defects on owned surfaces',
+      'Shipped consecutive flagship launch cycles with coordinated cross-platform triage and no carry-forward defects on owned surfaces',
     ],
     leadership: [
-      'UI lead for cart & promotions squad: system design, story grooming, approach finalization, and code reviews across 6 repositories',
-      'Authored RFC-style design doc on Module Federation integration and semver upgrade paths - adopted as squad standard for cross-repo remote entry contracts',
-      'Conducted knowledge-transfer sessions on squad EPICs - cut new-developer onboarding from ~3 weeks -> 1.5 weeks; mentored junior engineers on platform architecture',
-      'Primary UI liaison between the feature flag platform, backend services, and QA - leading war-room triage during flagship device and holiday releases',
+      'UI lead for purchase-flow engineering: system design, story grooming, approach finalization, and code reviews across 6 repositories',
+      'Authored an RFC-style design doc on micro-frontend integration and semver upgrade paths - adopted as a squad standard for remote-entry contracts',
+      'Conducted knowledge-transfer sessions on squad EPICs - cut new-developer onboarding from ~3 weeks to ~1.5 weeks; mentored junior engineers on platform architecture',
+      'Primary UI liaison between feature flags, backend services, and QA - leading incident triage during flagship and holiday releases',
     ],
     tech: ['Next.js', 'React', 'TypeScript', 'Micro-Frontends', 'Feature Flags', 'Jest', 'GitLab CI'],
   },

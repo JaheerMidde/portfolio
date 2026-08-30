@@ -16,7 +16,7 @@ export default function MetricDelta({ metrics, accentClass = 'text-accent-400' }
           key={metric.label}
           className="p-3 rounded-xl bg-surface-900/80 border border-white/5 text-center"
         >
-          <div className="text-gray-400 text-[10px] uppercase tracking-wider font-medium mb-2">
+          <div className="text-gray-400 text-xs uppercase tracking-wider font-medium mb-2">
             {metric.label}
           </div>
           {metric.display === 'kpi' ? (

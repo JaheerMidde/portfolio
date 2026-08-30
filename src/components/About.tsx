@@ -13,21 +13,21 @@ const cards = [
   {
     icon: Briefcase,
     title: 'Conversion & Performance',
-    content: 'UI lead for cart closers, promotional flyout optimization, and ML retention scoring - driving measurable relative conversion lift on high-traffic purchase surfaces.',
+    content: 'UI lead for high-traffic purchse surfaces - improving offer experiences, render performance, and controlled rollouts with measurable relative conversion lift.',
     color: 'text-accent-400',
     bg: 'bg-surface-800 border-white/10',
   },
   {
     icon: Zap,
     title: 'System Design & Release Quality',
-    content: 'Architecture decisions for multi-device configurator state, SSR security boundaries, and Lighthouse attestation gates - supporting reliable launch cycles.',
+    content: 'Architecture decisions for multi-device state, server-rendering data boundaries, and automated performance gates - supporting reliable launch cycles.',
     color: 'text-warm-400',
     bg: 'bg-surface-800 border-white/10',
   },
   {
     icon: BookOpen,
-    title: 'UI Lead - Cart & Promotions',
-    content: 'Core UI POC for cart conversion and promotions - system design, code reviews, knowledge transfer, and cross-team coordination with feature flags, backend, and QA during incidents.',
+    title: 'Purchase-Flow Leadership',
+    content: 'Core UI POC for purchase-flow engineering - system design, code reviews, knowledge transer, and cross-team coordination with featured flags, backend, and QA during incidents.',
     color: 'text-gray-300',
     bg: 'bg-surface-800 border-white/10',
   },
@@ -75,8 +75,8 @@ export default function About() {
                   <MapPin className="w-4 h-4 text-accent-400" aria-hidden="true" />
                   {personal.location}
                 </span>
-                . Core UI lead for cart & promotions engineering on Verizon&apos;s customer-facing e-commerce platform - shipping cart conversion, multi-product configurator flows, and production reliability for high-volume customer journeys.{' '}
-                <span className="text-gray-300">Open to Software Engineer II/III (frontend) at product companies.</span>
+                . Core UI lead for purchase-flow engineering on Verizon&apos;s customer-facing e-commerce platform - shipping cart conversion, multi-product configurator flows, and production reliability for high-volume customer journeys.{' '}
+                <span className="text-gray-300">Open to Software Engineer II/III (frontend) roles.</span>
               </p>
             </div>
           </div>

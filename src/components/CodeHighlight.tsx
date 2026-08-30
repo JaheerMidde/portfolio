@@ -20,7 +20,7 @@ function highlightLine(line: string): ReactNode[] {
   while (i < line.length) {
     if (line.startsWith('//', i)) {
       nodes.push(
-        <span key={key++} className="text-gray-500">
+        <span key={key++} className="text-gray-400">
           {line.slice(i)}
         </span>,
       );

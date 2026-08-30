@@ -21,7 +21,7 @@ export default function Experience() {
           </div>
           <h2 className="text-4xl font-serif text-white mb-4">Experience</h2>
           <p className="text-gray-400 text-lg">
-            Four years as core UI lead on Verizon&apos;s e-commerce platform - shipping cart conversion, configurator, and production reliability at enterprise scale.
+            4+ years as core UI lead on Verizon&apos;s e-commerce platform - shipping cart conversion, configurator, and production reliability at enterprise scale.
           </p>
         </motion.div>
 

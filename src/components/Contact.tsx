@@ -63,7 +63,7 @@ export default function Contact() {
             </div>
             <h2 className="text-4xl font-serif text-white mb-4">Get In Touch</h2>
             <p className="text-gray-400 text-lg leading-relaxed mb-8 sm:mb-12">
-              Open to Software Engineer II/III (frontend) at product companies.
+              Open to Software Engineer II/III (frontend) roles.
               Reach out for full-time opportunities or conversations about frontend systems at scale.
             </p>
           </motion.div>
