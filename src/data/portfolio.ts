@@ -1,8 +1,8 @@
 export const personal = {
   name: 'Jaheer Midde',
-  title: 'Software Engineer II - Frontend UI Lead',
+  title: 'Software Engineer II',
   tagline:
-    'Frontend UI lead for Verizon\'s enterprise telecom e-commerce platform - conversion, multi-device configuration, and production reliability across six Next.js micro-frontends serving ~60k cart sessions/day.',
+    'Frontend engineer at Verizon\'s enterprise telecom e-commerce platform - conversion, multi-device configuration, and production reliability across six Next.js micro-frontends serving ~60k cart sessions/day.',
   /** Sharp win - rendered on its own line in Hero for mobile readability */
   taglineProof: 'Improved p95 latency on an owned browse surface from 3.8s to 1.7s (55% faster).',
   photoUrl: '/Jaheer_Midde_DP.jpg',
@@ -195,7 +195,7 @@ export const projects: Project[] = [
     headlineMetric: 'Owned browse-surface p95 3.8s -> 1.7s · retention-offer conversion +12% relative · cart add-to-cart +8% relative',
     metricContext: 'Anonymized internal production results on owned e-commerce surfaces. The latency figure is p95 before and after optimization; percentage figures are relative lifts against a pre-change or control baseline; rollout exposure describes a controlled feature-flag progression. Measurement windows, exact traffic, dates, and sample sizes are omitted.',
     description:
-      'UI lead for conversion on Verizon\'s enterprise telecom e-commerce platform - improving promotional merchandising, retention offers, and purchase journeys across high-volume browse and checkout surfaces.',
+      'Frontend engineer focussed on conversion at Verizon\'s enterprise telecom e-commerce platform - improving promotional merchandising, retention offers, and purchase journeys across high-volume browse and checkout surfaces.',
     myContribution:
       'Owned end-to-end: request sequencing design, offer render optimization, and controlled rollout architecture. Led code reviews; backend and QA coordinated integration and experiment operations.',
     problem:
@@ -257,7 +257,7 @@ export const projects: Project[] = [
     headlineMetric: 'Connected-device attach +18% relative · zero state loss · 76 MRs across 6 repos',
     metricContext: 'Anonymized internal production result on owned purchase flows. The attach-rate figure is a relative lift against a pre-change baseline; onboarding compares approximate durations; MR and repository counts describe H1 2026 leadership scope. Measurement window, exact traffic, and sample size are omitted.',
     description:
-      'Core UI lead for a Next.js multi-product device configurator spanning phones, wearables, and tablets - multi-device navigation, persistent state, and dependency validation across connected-device purchase journeys.',
+      'Core UI engineering for a Next.js multi-product device configurator spanning phones, wearables, and tablets - multi-device navigation, persistent state, and dependency validation across connected-device purchase journeys.',
     myContribution:
       'Designed the device-context state model and cross-category validation rules. Owned system design docs and final review on 76 MRs across 6 repositories; mentored the squad on configurator patterns and grooming.',
     problem:
@@ -267,12 +267,12 @@ export const projects: Project[] = [
     outcome:
       'Enabled bidirectional add journeys with zero data loss across device-context switches; connected-device attach rate delivered an 18% relative lift on bundle flows. Cut new-developer onboarding from ~3 weeks to ~1.5 weeks through structured knowledge-transfer sessions.',
     technicalDeepDive:
-      'The configurator maintains a device-context stack in client state - when a user adds one device and navigates to another, the newest device becomes active while prior selections and eligibility decisions remain available. Cross-category logic validates dependencies before checkout rather than deferring them to the cart. As UI lead, I finalized approach docs, led grooming, and conducted code reviews across six repositories - merging 76 MRs in H1 2026 with zero static-analysis issues and quality gates on every push.',
+      'The configurator maintains a device-context stack in client state - when a user adds one device and navigates to another, the newest device becomes active while prior selections and eligibility decisions remain available. Cross-category logic validates dependencies before checkout rather than deferring them to the cart. I finalized approach docs, supported grooming, and conducted code reviews across six repositories - merging 76 MRs in H1 2026 with zero static-analysis issues and quality gates on every push.',
     metrics: [
       { label: 'Connected-device relative attach-rate lift', before: 'pre-change baseline', after: '+18%' },
       { label: 'MRs merged (H1 2026)', before: '-', after: '76', display: 'kpi' },
       { label: 'Developer onboarding time', before: '~3 wks', after: '~1.5 wks' },
-      { label: 'Repositories led', before: '-', after: '6', display: 'kpi' },
+      { label: 'Repositories involved', before: '-', after: '6', display: 'kpi' },
     ],
     artifacts: {
       showStateDiagram: true,
@@ -286,7 +286,7 @@ export const projects: Project[] = [
     highlights: [
       'Built multi-device navigation - seamless switching between product categories without state loss',
       'Orchestrated connected-device bundle flows with an in-context path to add a companion product',
-      'UI lead for purchase-flow engineering: system design, grooming, knowledge transfer, and code reviews across six repositories',
+      'Contributed to purchase-flow engineering: system design, grooming, knowledge transfer, and code reviews across six repositories',
       'Delivered purchase-flow migrations and guided checkout integrations as a core UI point of contact',
     ],
     tech: ['Next.js', 'TypeScript', 'React', 'Feature Flags', 'Jest', 'Sonar', 'Zustand', 'Module Federation'],
@@ -363,7 +363,7 @@ export interface Experience {
   location: string;
   description: string;
   achievements: string[];
-  leadership?: string[];
+  collaboration?: string[];
   tech: string[];
   progression?: RoleProgression[];
 }
@@ -380,15 +380,15 @@ export const experiences: Experience[] = [
       { role: 'Software Engineer II', period: 'Dec 2023 - Present' },
     ],
     description:
-      'Core UI lead for purchase-flow engineering on Verizon\'s enterprise telecom e-commerce platform - owning conversion improvements, multi-product configurator architecture, and production reliability across browse, configuration, and checkout micro-frontends serving high-volume customer journeys.',
+      'Core UI engineering for purchase-flow engineering on Verizon\'s enterprise telecom e-commerce platform - owning conversion improvements, multi-product configurator architecture, and production reliability across browse, configuration, and checkout micro-frontends serving high-volume customer journeys.',
     achievements: [
-      'UI lead for conversion and offer experiences across browse and checkout micro-frontends',
+      'Contributed to conversion and offer experiences across browse and checkout micro-frontends',
       'Architected a multi-product configurator enabling persistent cross-device state and bidirectional add flows',
       'Owned production stability for squad surfaces - SSR security remediation, defect triage, and launch-window war rooms during flagship releases',
       'Shipped consecutive flagship launch cycles with coordinated cross-platform triage and no carry-forward defects on owned surfaces',
     ],
-    leadership: [
-      'UI lead for purchase-flow engineering: system design, story grooming, approach finalization, and code reviews across 6 repositories',
+    collaboration: [
+      'Contributed to purchase-flow engineering: system design, story grooming, approach finalization, and code reviews across 6 repositories',
       'Authored an RFC-style design doc on micro-frontend integration and semver upgrade paths - adopted as a squad standard for remote-entry contracts',
       'Conducted knowledge-transfer sessions on squad EPICs - cut new-developer onboarding from ~3 weeks to ~1.5 weeks; mentored junior engineers on platform architecture',
       'Primary UI liaison between feature flags, backend services, and QA - leading incident triage during flagship and holiday releases',
@@ -488,7 +488,7 @@ export const siteMeta = {
   url: 'https://jaheermidde.vercel.app',
   ogImage: '/og-image.png',
   description:
-    'Frontend UI lead at Verizon - cart performance, configurator architecture, and production reliability. Open source: ShopForge and ConfigStack frontend demos.',
+    'Software Engineer II at Verizon - cart performance, configurator architecture, and production reliability. Open source: ShopForge and ConfigStack frontend demos.',
   builtWith: ['React 18', 'TypeScript', 'Vite', 'Tailwind CSS'],
   /** Shields.io badge for CI - update org/repo if different on GitHub */
   ciBadgeUrl: 'https://img.shields.io/github/actions/workflow/status/JaheerMidde/portfolio/ci.yml?branch=main&label=CI',

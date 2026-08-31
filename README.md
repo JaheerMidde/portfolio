@@ -1,6 +1,6 @@
 # Jaheer Midde - Portfolio
 
-Frontend-focused developer portfolio for Jaheer Midde, a Software Engineer II and Frontend UI Lead working on e-commerce conversion, multi-product configuration, micro-frontends, and production reliability.
+Frontend-focused developer portfolio for Jaheer Midde, a Software Engineer II working on e-commerce conversion, multi-product configuration, micro-frontends, and production reliability.
 
 **Live site:** [jaheermidde.vercel.app](https://jaheermidde.vercel.app)
 

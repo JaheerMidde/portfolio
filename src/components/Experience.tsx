@@ -21,7 +21,7 @@ export default function Experience() {
           </div>
           <h2 className="text-4xl font-serif text-white mb-4">Experience</h2>
           <p className="text-gray-400 text-lg">
-            4+ years as core UI lead on Verizon&apos;s e-commerce platform - shipping cart conversion, configurator, and production reliability at enterprise scale.
+            4+ years as a core UI engineer at Verizon&apos;s e-commerce platform - shipping cart conversion, configurator, and production reliability at enterprise scale.
           </p>
         </motion.div>
 
@@ -118,16 +118,16 @@ export default function Experience() {
                     </ul>
                   </div>
 
-                  {exp.leadership && exp.leadership.length > 0 && (
+                  {exp.collaboration && exp.collaboration.length > 0 && (
                     <div className="mb-6">
                       <h4 className="text-white font-medium text-sm mb-4 flex items-center gap-2">
                         <Users className="w-4 h-4 text-cyan-400" aria-hidden="true" />
-                        Leadership &amp; Influence
+                        Collaboration &amp; Influence
                       </h4>
                       <ul className="space-y-3">
-                        {exp.leadership.map((item, li) => (
+                        {exp.collaboration.map((item, li) => (
                           <motion.li
-                            key={`${exp.company}-leadership-${item}`}
+                            key={`${exp.company}-collaboration-${item}`}
                             initial={{ opacity: 0, x: -10 }}
                             animate={inView ? { opacity: 1, x: 0 } : {}}
                             transition={{ delay: 0.45 + li * 0.07 }}
